@@ -1,0 +1,110 @@
+#include"final.h"
+
+void getmoves(char* moves,char* mv)
+{
+int i=0,j=0,k=0;
+//char moves[]="F F' R R' B B' U U' D D' L L' ";
+for(i=0;moves[i]!='\0';i++)
+{
+if(moves[i]!=' '&&moves[i]!='\'')
+ {
+ j++;
+ }
+ }
+
+//char mv[j];
+//char in[j];
+
+for(i=0,k=0;moves[i]!='\0';)
+{
+if(moves[i]=='F')
+{
+if(moves[i+1]=='\'')
+{mv[k]='1';
+k++;
+i+=3;
+}
+else if(moves[i+1]!='\'')
+{mv[k]='2';
+k++;
+i+=2;
+}
+}
+
+if(moves[i]=='R')
+{
+if(moves[i+1]=='\'')
+{mv[k]='3';
+k++;
+i+=3;
+}
+else if(moves[i+1]!='\'')
+{mv[k]='4';
+k++;
+i+=2;
+}
+}
+
+if(moves[i]=='U')
+{
+if(moves[i+1]=='\'')
+{mv[k]='5';
+k++;
+i+=3;
+}
+else if(moves[i+1]!='\'')
+{mv[k]='6';
+k++;
+i+=2;
+}
+}
+
+if(moves[i]=='D')
+{
+if(moves[i+1]=='\'')
+{mv[k]='7';
+k++;
+i+=3;
+}
+else if(moves[i+1]!='\'')
+{mv[k]='8';
+k++;
+i+=2;
+}
+}
+
+if(moves[i]=='L')
+{
+if(moves[i+1]=='\'')
+{mv[k]='9';
+k++;
+i+=3;
+}
+else if(moves[i+1]!='\'')
+{mv[k]='10';
+k++;
+i+=2;
+}
+}
+
+if(moves[i]=='B')
+{
+if(moves[i+1]=='\'')
+{mv[k]='11';
+k++;
+i+=3;
+}
+else if(moves[i+1]!='\'')
+{mv[k]='12';
+k++;
+i+=2;
+}
+}
+
+if(moves[i]==' ')
+{i++;}
+
+}
+mv[j]='\0';
+
+}
